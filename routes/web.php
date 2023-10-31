@@ -1,0 +1,58 @@
+<?php
+
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\SatuanController;
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+Route::get('/', [HomeController::class, 'index']);
+Route::get('login', [HomeController::class, 'login']);
+Route::get('register', [HomeController::class, 'register']);
+
+
+Route::get('User', [UserController::class, 'index']);
+Route::get('User/create', [UserController::class, 'create']);
+Route::post('User', [UserController::class, 'store']);
+Route::get('User/{User}', [UserController::class, 'show']);
+Route::get('User/{User}/edit', [UserController::class, 'edit']);
+Route::put('User/{User}', [UserController::class, 'update']);
+Route::delete('User/{User}', [UserController::class, 'delete']);
+
+Route::get('kategori', [KategoriController::class, 'index']);
+Route::get('kategori/create', [KategoriController::class, 'create']);
+Route::post('kategori', [KategoriController::class, 'store']);
+Route::get('kategori/{kategori}', [KategoriController::class, 'show']);
+Route::get('kategori/{kategori}/edit', [KategoriController::class, 'edit']);
+Route::put('kategori/{kategori}', [KategoriController::class, 'update']);
+Route::delete('kategori/{kategori}', [KategoriController::class, 'delete']);
+
+Route::get('satuan', [SatuanController::class, 'index']);
+Route::get('satuan/create', [SatuanController::class, 'create']);
+Route::post('satuan', [SatuanController::class, 'store']);
+Route::get('satuan/{satuan}', [SatuanController::class, 'show']);
+Route::get('satuan/{satuan}/edit', [SatuanController::class, 'edit']);
+Route::put('satuan/{satuan}', [SatuanController::class, 'update']);
+Route::delete('satuan/{satuan}', [SatuanController::class, 'delete']);
+
+Route::get('barang', [BarangController::class, 'index']);
+Route::get('barang/create', [BarangController::class, 'create']);
+Route::post('barang', [BarangController::class, 'store']);
+Route::get('barang/{barang}', [BarangController::class, 'show']);
+Route::get('barang/{barang}/edit', [BarangController::class, 'edit']);
+Route::put('barang/{barang}', [BarangController::class, 'update']);
+Route::delete('barang/{barang}', [BarangController::class, 'delete']);
+
+
