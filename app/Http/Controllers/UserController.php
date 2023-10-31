@@ -22,10 +22,10 @@ class UserController extends Controller
     function store()
     {
         $user = new user;
+        $user->username = request('username');
         $user->nama = request('nama');
-        $user->harga = request('harga');
-        // $user->deskripsi = request('deskripsi');
-        // $user->foto = request('foto');
+        $user->email = request('email');
+        $user->password = request('password');
         $user->save();
 
         return redirect('user');
@@ -45,12 +45,12 @@ class UserController extends Controller
 
     function update(user $user)
     {
+        $user->username = request('username');
         $user->nama = request('nama');
-        $user->harga = request('harga');
-        // $user->deskripsi = request('deskripsi');
-        // $user->foto = request('foto');
+        $user->email = request('email');
+        $user->password = request('password');
         $user->save();
- 
+
         return redirect('user'); 
     }
 
