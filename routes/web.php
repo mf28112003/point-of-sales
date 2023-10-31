@@ -23,13 +23,13 @@ Route::get('login', [HomeController::class, 'login']);
 Route::get('register', [HomeController::class, 'register']);
 
 
-Route::get('User', [UserController::class, 'index']);
-Route::get('User/create', [UserController::class, 'create']);
-Route::post('User', [UserController::class, 'store']);
-Route::get('User/{User}', [UserController::class, 'show']);
-Route::get('User/{User}/edit', [UserController::class, 'edit']);
-Route::put('User/{User}', [UserController::class, 'update']);
-Route::delete('User/{User}', [UserController::class, 'delete']);
+Route::get('user', [UserController::class, 'index']);
+Route::get('user/create', [UserController::class, 'create']);
+Route::post('user', [UserController::class, 'store']);
+Route::get('user/{user}', [UserController::class, 'show']);
+Route::get('user/{user}/edit', [UserController::class, 'edit']);
+Route::put('user/{user}', [UserController::class, 'update']);
+Route::delete('user/{user}', [UserController::class, 'delete']);
 
 Route::get('kategori', [KategoriController::class, 'index']);
 Route::get('kategori/create', [KategoriController::class, 'create']);

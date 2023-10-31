@@ -117,7 +117,7 @@
               </li>
             </ul>
           </li>
-          <x-Layout.sidebar.menu-item url="user" label="Pengguna" icon="fas fa-user" />
+          <x-Layout.sidebar.menu-item url="user" label="User" icon="fas fa-user" />
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
