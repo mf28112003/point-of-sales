@@ -22,15 +22,16 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('login', [HomeController::class, 'login']);
 Route::get('register', [HomeController::class, 'register']);
 
+//user//
+Route::get('user', [UserController::class, 'index']);
+Route::get('user/create', [UserController::class, 'create']);
+Route::post('user', [UserController::class, 'store']);
+Route::get('user/{user}', [UserController::class, 'show']);
+Route::get('user/{user}/edit', [UserController::class, 'edit']);
+Route::put('user/{user}', [UserController::class, 'update']);
+Route::delete('user/{user}', [UserController::class, 'delete']);
 
-Route::get('User', [UserController::class, 'index']);
-Route::get('User/create', [UserController::class, 'create']);
-Route::post('User', [UserController::class, 'store']);
-Route::get('User/{User}', [UserController::class, 'show']);
-Route::get('User/{User}/edit', [UserController::class, 'edit']);
-Route::put('User/{User}', [UserController::class, 'update']);
-Route::delete('User/{User}', [UserController::class, 'delete']);
-
+//kategori//
 Route::get('kategori', [KategoriController::class, 'index']);
 Route::get('kategori/create', [KategoriController::class, 'create']);
 Route::post('kategori', [KategoriController::class, 'store']);
@@ -39,6 +40,7 @@ Route::get('kategori/{kategori}/edit', [KategoriController::class, 'edit']);
 Route::put('kategori/{kategori}', [KategoriController::class, 'update']);
 Route::delete('kategori/{kategori}', [KategoriController::class, 'delete']);
 
+//satuan//
 Route::get('satuan', [SatuanController::class, 'index']);
 Route::get('satuan/create', [SatuanController::class, 'create']);
 Route::post('satuan', [SatuanController::class, 'store']);
@@ -47,6 +49,7 @@ Route::get('satuan/{satuan}/edit', [SatuanController::class, 'edit']);
 Route::put('satuan/{satuan}', [SatuanController::class, 'update']);
 Route::delete('satuan/{satuan}', [SatuanController::class, 'delete']);
 
+//barang//
 Route::get('barang', [BarangController::class, 'index']);
 Route::get('barang/create', [BarangController::class, 'create']);
 Route::post('barang', [BarangController::class, 'store']);

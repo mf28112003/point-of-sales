@@ -39,7 +39,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url ('satuan')}}" class="nav-link">
+                <a href="{{url ('satuan')}}" class="nav-link active">
                   <i class="fas fa-th nav-icon"></i>
                   <p>Satuan</p>
                 </a>
@@ -69,7 +69,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Supplier</p>
                 </a>
