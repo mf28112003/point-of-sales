@@ -28,7 +28,7 @@ class UserController extends Controller
         $user->password = bcrypt(request('password'));
         $user->save();
 
-        return redirect('user');
+        return redirect('admin/user');
     }
 
     function show(user $user)
@@ -51,13 +51,13 @@ class UserController extends Controller
         $user->password = bcrypt(request('password'));
         $user->save();
 
-        return redirect('user');
+        return redirect('admin/user');
     }
 
     public function destroy(User $user)
     {
         $user->delete();
 
-        return redirect('user');
+        return redirect('admin/user');
     }
 }
