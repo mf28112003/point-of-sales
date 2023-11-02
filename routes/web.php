@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\GudangController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KategoriController;
@@ -57,5 +58,14 @@ Route::get('barang/{barang}', [BarangController::class, 'show']);
 Route::get('barang/{barang}/edit', [BarangController::class, 'edit']);
 Route::put('barang/{barang}', [BarangController::class, 'update']);
 Route::delete('barang/{barang}', [BarangController::class, 'delete']);
+
+//gudang//
+Route::get('gudang', [GudangController::class, 'index']);
+Route::get('gudang/create', [GudangController::class, 'create']);
+Route::post('gudang', [GudangController::class, 'store']);
+Route::get('gudang/{gudang}', [GudangController::class, 'show']);
+Route::get('gudang/{gudang}/edit', [GudangController::class, 'edit']);
+Route::put('gudang/{gudang}', [GudangController::class, 'update']);
+Route::delete('gudang/{gudang}', [GudangController::class, 'delete']);
 
 
