@@ -20,7 +20,6 @@
                 <thead>
                     <th width="100px">No</th>
                     <th width="150px">Aksi</th>
-<<<<<<< HEAD
                     <th>Nama</th>
                     <th>user name</th>
                     <th>email</th>
@@ -47,7 +46,6 @@
                             {{-- Rp. {{number_format ($user->harga)}} --}}
                         </td>
                     </tr>
-=======
                     <th>Username</th>
                     <th>Nama</th>
                     <th>Email</th>
@@ -72,7 +70,6 @@
                             <td> {{ $user->nama }}</td>
                             <td> {{ $user->email }}</td>
                         </tr>
->>>>>>> e3f82b724aaa3cbd554e5df26034a65619d6d6be
                     @endforeach
                 </tbody>
             </table>
