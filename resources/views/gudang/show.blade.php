@@ -1,8 +1,8 @@
 <x-app>
     <div class="card">
         <div class="card-header">
-            <div class="card-title">Detail barang</div>
-            <a href="{{url('barang', $barang->id)}}/edit" class="btn btn-warning float-right">
+            <div class="card-title">Detail gudang</div>
+            <a href="{{url('gudang', $gudang->id)}}/edit" class="btn btn-warning float-right">
                 <i class="fas fa-edit"></i>Edit
             </a>
         </div>
@@ -20,9 +20,9 @@
                         <dd>{{$barang->foto}}</dd> --}}
                     </dl>                  
                 </div>
-                {{-- <div class="col-md-6">
+                <!-- <div class="col-md-6">
                     <img src="{{$barang->foto}}" alt="" class="img-fluid">
-                </div> --}}
+                </div> -->
             </div>
         </div>
     </div>
