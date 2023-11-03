@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\SatuanController;
+use App\Http\Controllers\GudangController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,4 +59,12 @@ Route::get('barang/{barang}/edit', [BarangController::class, 'edit']);
 Route::put('barang/{barang}', [BarangController::class, 'update']);
 Route::delete('barang/{barang}', [BarangController::class, 'delete']);
 
+//gudang//
+Route::get('gudang', [GudangController::class, 'index']);
+Route::get('gudang/create', [GudangController::class, 'create']);
+Route::post('gudang', [GudangController::class, 'store']);
+Route::get('gudang/{gudang}', [GudangController::class, 'show']);
+Route::get('gudang/{gudang}/edit', [GudangController::class, 'edit']);
+Route::put('gudang/{gudang}', [GudangController::class, 'update']);
+Route::delete('gudang/{gudang}', [GudangController::class, 'delete']);
 
