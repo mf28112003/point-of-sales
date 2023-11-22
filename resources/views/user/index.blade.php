@@ -70,13 +70,13 @@
                             <td> {{ $user->nama }}</td>
                             <td> {{ $user->email }}</td>
                         </tr>
-                    @endforeach
+                    @foreach
                 </tbody>
             </table>
         </div>
     </div>
-<<<<<<< HEAD
+
 </x-app>
-=======
+
 </x-app>
->>>>>>> e3f82b724aaa3cbd554e5df26034a65619d6d6be
+

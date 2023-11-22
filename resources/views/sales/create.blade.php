@@ -11,13 +11,13 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="" class="control-label">nama gudang </label>
+                            <label for="" class="control-label">nama barang</label>
                             <input type="text" name="nama_barang" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="" class="control-label">jumlah gudang  </label>
+                            <label for="" class="control-label">jumlah barang </label>
                             <input type="number" name="jumlah_barang" class="form-control">
                         </div>
                     </div>

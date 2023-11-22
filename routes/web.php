@@ -6,7 +6,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\SatuanController;
-use App\Http\Controllers\GudangController;
+use App\Http\Controllers\CustomerController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -68,8 +69,13 @@ Route::get('gudang/{gudang}', [GudangController::class, 'show']);
 Route::get('gudang/{gudang}/edit', [GudangController::class, 'edit']);
 Route::put('gudang/{gudang}', [GudangController::class, 'update']);
 Route::delete('gudang/{gudang}', [GudangController::class, 'delete']);
-<<<<<<< HEAD
 
-=======
->>>>>>> main
+
+Route::controller(CustomerController::class)->group(function () {
+    Route::get('/customer', 'index');
+    Route::get('/customer/create', 'create');
+    Route::post('/customer/store', 'store');
+});
+
+
 

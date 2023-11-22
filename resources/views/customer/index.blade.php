@@ -1,43 +1,46 @@
 <x-app>
     <div class="card">
         <div class="card-header">
-            <div class="card-title">
-                Data gudang
+            <div class="card-title ">
+                Customer
             </div>
-            <a href="{{url('gudang/create')}}" class="btn btn-primary float-right">
-                <i class="fas fa-plus">Tambah gudang</i>
-            </a>
+            <a href="{{ url('customer/create') }}" class="btn btn-primary float-right "><i class="fas fa-plus">Tambah Data</i></a>
         </div>
         <div class="card-body">
             <table class="table table-bordered">
                 <thead>
                     <th width="100px">No</th>
                     <th width="150px">Aksi</th>
-                    <th>Nama Barang</th>
-                    <th>Jumlah Barang</th>
+                    <th>id</th>
+                    <th>Nama</th>
+                    <th>Email</th>
                    
                 </thead>
                 <tbody>
-                    @foreach($list_gudang as $gudang)
+                    @foreach($list_customer as $customer)
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td>
+                        {{-- <td>
                             <div class="btn-group">
-                                <a href="{{url ('gudang', $gudang->id)}}" class="btn btn-info">
+                                <a href="{{url ('gudang', $gudang->user_id)}}" class="btn btn-info">
                                     <i class="fas fa-info"></i>
                                 </a>
-                                <a href="{{url ('gudang', $gudang->id)}}/edit" class="btn btn-warning">
+                                <a href="{{url ('gudang', $gudang->user_id)}}/edit" class="btn btn-warning">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <x-button.delete id="{{$gudang->id}}"/>
+                                <x-button.delete id="{{$gudang->user_id}}"/>
                             </div>
+                        </td> --}}
+                        <td>
+                            {{$customer->id}}
                         </td>
                         <td>
-                            {{$gudang->nama_barang}}
+                            {{$customer->name}}
                         </td>
                         <td>
-                            Rp. {{number_format ($gudang->jumlah_barang)}}
+                            {{$customer->email}}
                         </td>
+                       
                        
                     </tr>
                     @endforeach
