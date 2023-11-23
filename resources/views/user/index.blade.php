@@ -37,9 +37,10 @@
                             <td> {{ $user->nama }}</td>
                             <td> {{ $user->email }}</td>
                         </tr>
-                    @endforeach
+                    @foreach
                 </tbody>
             </table>
         </div>
     </div>
 </x-app>
+>>>>>>> 
