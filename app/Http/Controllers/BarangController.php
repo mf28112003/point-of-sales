@@ -35,7 +35,7 @@ class BarangController extends Controller
     function show(barang $barang)
     {
         $data['barang'] = $barang;
-        return view('barang.show');
+        return view('barang.show', $data);
     }
 
     function edit(barang $barang)

@@ -9,7 +9,7 @@
             </a>
         </div>
         <div class="card-body">
-            <table class="table table-bordered">
+            <table class="table table-striped">
                 <thead>
                     <th width="100px">No</th>
                     <th width="150px">Aksi</th>
@@ -43,7 +43,7 @@
                             {{$barang->deskripsi}}
                         </td>
                         <td>
-                            {{$barang->foto}}
+                           <img src=" {{$barang->foto}}" alt="">
                         </td>
                     </tr>
                     @endforeach
