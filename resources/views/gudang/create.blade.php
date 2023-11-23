@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="" class="control-label">nama</label>
+                            <label for="" class="control-label">nama barang</label>
                             <input type="text" name="nama" class="form-control">
                         </div>
                     </div>
@@ -21,7 +21,7 @@
                             <input type="number" name="jumlah_barang" class="form-control">
                         </div>
                     </div>
-                    {{-- <div class="col-md-12">
+                    <!-- {{-- <div class="col-md-12">
                         <div class="form-group">
                             <label for="" class="control-label">deskripsi </label>
                             <input type="text" name="deskripsi" class="form-control">
@@ -32,7 +32,7 @@
                             <label for="" class="control-label">foto </label>
                             <input type="text" name="foto" class="form-control">
                         </div>
-                    </div> --}}
+                    </div> --}} -->
                     <div class="row">
                         <div class="col-md-12">
                             <button class="btn btn-primary float-right">

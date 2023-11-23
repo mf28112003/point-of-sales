@@ -15,14 +15,14 @@
                         <dt>Harga beli</dt>
                         <dd>{{$barang->harga}}</dd>
                         <dt>Deskripsi</dt>
-                        <dd>{{$barang->Deskripsi}}</dd>
-                        <dt>foto</dt>
-                        <dd>{{$barang->foto}}</dd>
+                        <dd>{{!! nl2br($barang->Deskripsi)!!}}</dd>
+                        <!-- <dt>foto</dt>
+                        <dd>{{$barang->foto}}</dd> -->
                     </dl>                  
                 </div>
-                <!-- <div class="col-md-6">
+                <div class="col-md-6">
                     <img src="{{$barang->foto}}" alt="" class="img-fluid">
-                </div> -->
+                </div>
             </div>
         </div>
     </div>

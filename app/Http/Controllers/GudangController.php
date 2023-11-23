@@ -7,7 +7,7 @@ use App\Models\Gudang;
 
 use Illuminate\Http\Request;
 
-class gudangController extends Controller
+class GudangController extends Controller
 {
     function index()
     {
@@ -23,10 +23,10 @@ class gudangController extends Controller
     function store()
     {
         $gudang = new gudang;
-        $gudang->nama_barang = request('nama');
-        $gudang->jumlah_barang = request('jumlah_barang');
-        // $gudang->deskripsi = request('deskripsi');
-        // $gudang->foto = request('foto');
+        $gudang->nama = request('nama');
+        $gudang->harga = request('harga');
+        $gudang->deskripsi = request('deskripsi');
+        $gudang->foto = request('foto');
         $gudang->save();
 
         return redirect('gudang');
@@ -46,10 +46,10 @@ class gudangController extends Controller
 
     function update(gudang $gudang)
     {
-        $gudang->nama_barang = request('nama');
-        $gudang->jumlah_barang = request('jumlah_barang');
-        // $gudang->deskripsi = request('deskripsi');
-        // $gudang->foto = request('foto');
+        $gudang->nama = request('nama');
+        $gudang->harga = request('harga');
+        $gudang->deskripsi = request('deskripsi');
+        $gudang->foto = request('foto');
         $gudang->save();
  
         return redirect('gudang'); 

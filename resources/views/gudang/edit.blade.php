@@ -6,32 +6,32 @@
             </div>
         </div>
         <div class="card-body">
-            <form method="post" action="{{url('kategori', $kategori->id)}}">
+            <form method="post" action="{{url('gudang', $gudang->id)}}">
                 @csrf
                 @method('put')
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="" class="control-label">nama </label>
-                            <input type="text" name="nama" value="{{$kategori->nama}}" class="form-control">
+                            <label for="" class="control-label">nama barang </label>
+                            <input type="text" name="nama_barang" value="{{$gudang->nama}}" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="" class="control-label">email</label>
-                            <input type="text" name="harga" value="{{$kategori->harga}}" class="form-control">
+                            <label for="" class="control-label">jumlah barang</label>
+                            <input type="number" name="jumlah_barang" value="{{$gudang->jumlah_barang}}" class="form-control">
                         </div>
-                    <!-- <div class="col-md-12">
+                    <!-- {{-- <div class="col-md-12">
                         <div class="form-group">
                             <label for="" class="control-label">foto</label>
-                            <input type="text" name="foto" value="{{$kategori->foto}}" class="form-control">
+                            <input type="text" name="foto" value="{{$gudang->foto}}" class="form-control">
                         </div>
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="" class="control-label">deskripsi</label>
-                            <input type="text" name="deskripsi" value="{{$kategori->deskripsi}}" class="form-control">
-                        </div> -->
-                    </div>
+                            <input type="text" name="deskripsi" value="{{$gudang->deskripsi}}" class="form-control">
+                        </div>
+                    </div> --}} -->
                     <div class="row">
                         <div class="col-md-12">
                             <button class="btn btn-primary float-right">
