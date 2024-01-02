@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\SatuanController;
+use App\Models\Customer;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,16 +43,10 @@ Route::middleware('auth')->group(function() {
         Route::resource('barang', BarangController::class);
         //gudang//
         Route::resource('gudang', GudangController::class);
-    
-    //cutomer//
-    Route::get('customer', [CustomerController::class, 'index']);
-    Route::get('customer/create', [CustomerController::class, 'create']);
-    Route::post('customer', [CustomerController::class, 'store']);
-    Route::get('customer/{customer}', [CustomerController::class, 'show']);
-    Route::get('customer/{customer}/edit', [CustomerController::class, 'edit']);
-    Route::put('customer/{customer}', [CustomerController::class, 'update']);
-    Route::delete('customer/{customer}', [CustomerController::class, 'destroy']);
-    });
-    
+        
+        //cutomer//
+        Route::resource('customer', CustomerController::class);
+
+    });  
 });
 
