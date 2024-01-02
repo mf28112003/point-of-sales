@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="card-body">
-            <form method="post" action="{{url ('customer/store')}}">
+            <form method="post" action="{{url ('admin/customer')}}">
                 @csrf
                 <div class="row">
                     <div class="col-md-12">
@@ -17,16 +17,22 @@
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
+                            <label for="" class="control-label">nama</label>
+                            <input type="text" name="nama" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
                             <label for="" class="control-label">email id </label>
                             <input type="text" name="email_id" class="form-control">
                         </div>
                     </div>
-                    {{-- <div class="col-md-12">
+                    <div class="col-md-12">
                         <div class="form-group">
-                            <label for="" class="control-label">deskripsi </label>
-                            <input type="text" name="deskripsi" class="form-control">
+                            <label for="" class="control-label">alamat </label>
+                            <input type="text" name="alamat" class="form-control">
                         </div>
-                    </div> --}}
+                    </div>
                     {{-- <div class="col-md-12">
                         <div class="form-group">
                             <label for="" class="control-label">foto </label>

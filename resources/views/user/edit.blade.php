@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="card-body">
-            <form method="post" action="{{ url('user', $user->id) }}">
+            <form method="post" action="{{ url('admin/user', $user->id) }}">
                 @csrf
                 @method('put')
                 <div class="row">
@@ -28,6 +28,17 @@
                         <div class="form-group">
                             <label for="" class="control-label">Email</label>
                             <input type="email" name="email" Value="{{ $user->email }}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="" class="control-label">jenis kelamin</label>
+                            <select name="jenis_kelamin" value="{{$user->jenis_kelamin}}" class="form-control">
+                                <option value=""></option>
+                                <option value="Laki laki">Laki laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
                         </div>
                     </div>
                     <div class="col-md-6">

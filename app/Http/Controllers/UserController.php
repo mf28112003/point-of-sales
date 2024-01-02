@@ -10,7 +10,17 @@ class UserController extends Controller
 {
     function index()
     {
-        $data['list_user'] = user::all();
+        if(request('nama')){
+            $nama="%" . request('nama') . "%";
+            $data['list_user']= User::where('nama', 'like', $nama)->get();
+        }
+        elseif(request('jenis_kelamin')){
+            $data['list_user']= User::where('jenis_kelamin', request('jenis_kelamin'))->get();
+        }
+        else{
+            $data['list_user'] = user::all();
+
+        }
         return view('user.index', $data);
     }
 
@@ -25,6 +35,7 @@ class UserController extends Controller
         $user->nama = request('nama');
         $user->username = request('username');
         $user->email = request('email');
+        $user->jenis_kelamin = request('jenis_kelamin');
         $user->password = bcrypt(request('password'));
         $user->save();
 
@@ -48,6 +59,7 @@ class UserController extends Controller
         $user->nama = request('nama');
         $user->username = request('username');
         $user->email = request('email');
+        $user->jenis_kelamin = request('jenis_kelamin');
         $user->password = bcrypt(request('password'));
         $user->save();
 

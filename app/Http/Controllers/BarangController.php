@@ -29,7 +29,7 @@ class BarangController extends Controller
         $barang->foto = request('foto');
         $barang->save();
 
-        return redirect('barang');
+        return redirect('admin/barang');
     }
 
     function show(barang $barang)
@@ -52,12 +52,12 @@ class BarangController extends Controller
         $barang->foto = request('foto');
         $barang->save();
  
-        return redirect('barang'); 
+        return redirect('admin/barang'); 
     }
 
-    function delete(barang $barang)
+    function destroy(barang $barang)
     {
         $barang->delete();
-        return redirect('barang');
+        return redirect('admin/barang');
     }
 }

@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header">
             <div class="card-title">Detail satuan</div>
-            <a href="{{url('satuan', $satuan->id)}}/edit" class="btn btn-warning float-right">
+            <a href="{{url('admin/satuan', $satuan->id)}}/edit" class="btn btn-warning float-right">
                 <i class="fas fa-edit"></i>Edit
             </a>
         </div>

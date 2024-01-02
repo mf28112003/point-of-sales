@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header">
             <div class="card-tittle">Detail User</div>
-            <a href="{{ url('user', $user->id) }}/edit" class="btn btn-warning float-right">
+            <a href="{{ url('admin/user', $user->id) }}/edit" class="btn btn-warning float-right">
                 <i class="fas fa-edit"></i>
                 Edit
             </a>
@@ -17,6 +17,8 @@
                         <dd>{{ $user->nama }}</dd>
                         <dt>email </dt>
                         <dd>{{ $user->email }}</dd>
+                        <dt>Jenis Kelamin </dt>
+                        <dd>{{ $user->jenis_kelamin }}</dd>
                     </dl>
                 </div>
                 <div class="col-md-6">

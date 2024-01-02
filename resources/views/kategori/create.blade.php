@@ -6,19 +6,25 @@
             </div>
         </div>
         <div class="card-body">
-            <form method="post" action="{{url ('kategori')}}">
+            <form method="post" action="{{url ('admin/kategori')}}">
                 @csrf
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="" class="control-label">nama</label>
-                            <input type="text" name="nama" class="form-control">
+                            <label for="" class="control-label">Nama Kategori</label>
+                            <input type="text" name="nama_kategori" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="" class="control-label">harga </label>
-                            <input type="number" name="harga" class="form-control">
+                            <label for="" class="control-label">Deskripsi</label>
+                            <input type="text" name="deskripsi" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="" class="control-label">Tanggal Dibuat</label>
+                            <input type="date" name="tanggal_dibuat" class="form-control">
                         </div>
                     </div>
                     <div class="row">

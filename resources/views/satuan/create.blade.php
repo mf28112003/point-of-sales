@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="card-body">
-            <form method="post" action="{{url ('satuan')}}">
+            <form method="post" action="{{url ('admin/satuan')}}">
                 @csrf
                 <div class="row">
                     <div class="col-md-12">
