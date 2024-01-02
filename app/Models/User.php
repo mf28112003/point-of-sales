@@ -11,7 +11,7 @@ use App\Models\Customer;
 
 class User extends Authenticatable
 {
-    protected $table = 'users';
+    protected $table = 'user';
 
     public function customer(){
          return $this->hasOne(Customer::class);

@@ -29,7 +29,7 @@ class SatuanController extends Controller
         // $satuan->foto = request('foto');
         $satuan->save();
 
-        return redirect('satuan');
+        return redirect('admin/satuan');
     }
 
     function show(Satuan $satuan)
@@ -52,12 +52,12 @@ class SatuanController extends Controller
         // $satuan->foto = request('foto');
         $satuan->save();
  
-        return redirect('satuan'); 
+        return redirect('admin/satuan'); 
     }
 
-    function delete(Satuan $satuan)
+    function destroy(Satuan $satuan)
     {
         $satuan->delete();
-        return redirect('satuan');
+        return redirect('admin/satuan');
     }
 }

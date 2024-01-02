@@ -4,7 +4,7 @@
             <div class="card-title">
                 Data satuan
             </div>
-            <a href="{{url('satuan/create')}}" class="btn btn-primary float-right">
+            <a href="{{url('admin/satuan/create')}}" class="btn btn-primary float-right">
                 <i class="fas fa-plus">Tambah satuan</i>
             </a>
         </div>
@@ -22,10 +22,10 @@
                         <td>{{$loop->iteration}}</td>
                         <td>
                             <div class="btn-group">
-                                <a href="{{url ('satuan', $satuan->id)}}" class="btn btn-info">
+                                <a href="{{url ('admin/satuan', $satuan->id)}}" class="btn btn-info">
                                     <i class="fas fa-info"></i>
                                 </a>
-                                <a href="{{url ('satuan', $satuan->id)}}/edit" class="btn btn-warning">
+                                <a href="{{url ('admin/satuan', $satuan->id)}}/edit" class="btn btn-warning">
                                     <i class="fas fa-edit"></i>
                                 </a>
                                 <x-button.delete id="{{$satuan->id}}"/>

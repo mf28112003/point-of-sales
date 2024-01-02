@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header">
             <div class="card-title">Detail gudang</div>
-            <a href="{{url('gudang', $gudang->id)}}/edit" class="btn btn-warning float-right">
+            <a href="{{url('admin/gudang', $gudang->id)}}/edit" class="btn btn-warning float-right">
                 <i class="fas fa-edit"></i>Edit
             </a>
         </div>
@@ -14,10 +14,10 @@
                         <dd>{{$barang->nama}}</dd>
                         <dt>jumlah barang</dt>
                         <dd>{{$barang->jumlah_barang}}</dd>
-                        {{-- <dt>Deskripsi</dt>
+                        <!-- <dt>Deskripsi</dt>
                         <dd>{{$barang->Deskripsi}}</dd>
                         <dt>foto</dt>
-                        <dd>{{$barang->foto}}</dd> --}}
+                        <dd>{{$barang->foto}}</dd> -->
                     </dl>                  
                 </div>
                 <!-- <div class="col-md-6">

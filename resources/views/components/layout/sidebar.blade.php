@@ -8,14 +8,14 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <img src="{{url ('public/admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">{{ auth()->user()->nama }}</a>
         </div>
-      </div>
+      </div> -->
 
       <!-- SidebarSearch Form -->
       <!-- Sidebar Menu -->
@@ -25,7 +25,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
             <a href="{{url('kategori.index')}}" class="nav-link active">
-              <i class="nav-icon fas fa-list"></i>
+              <i class="nav-icon fas fa-th"></i>
               <p>
                 Master Data
                 <i class="right fas fa-angle-left"></i>
@@ -33,43 +33,43 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url ('kategori')}}" class="nav-link active">
-                  <i class="fas fa-th nav-icon"></i>
+                <a href="{{url ('admin/kategori')}}" class="nav-link ">
+                  <i class="fas fa-list nav-icon"></i>
                   <p>Kategori</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url ('satuan')}}" class="nav-link active">
-                  <i class="fas fa-th nav-icon"></i>
+                <a href="{{url ('admin/satuan')}}" class="nav-link ">
+                  <i class="fas fa-box nav-icon"></i>
                   <p>Satuan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url ('barang')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                <a href="{{url ('admin/barang')}}" class="nav-link">
+                  <i class="far fa-bookmark nav-icon"></i>
                   <p>barang</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{url ('gudang')}}" class="nav-link">
+              <!-- <li class="nav-item">
+                <a href="{{url ('admin/gudang')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Gudang</p>
                 </a>
-              </li>
+              </li> -->
               <li class="nav-item">
-                <a href="{{url('customer')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                <a href="{{url('admin/customer')}}" class="nav-link">
+                  <i class="fa fa-users nav-icon"></i>  
                   <p>Customer</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                <a href="{{url('admin/sales')}}" class="nav-link">
+                <i class="fas fa-cart-plus nav-icon"></i>
                   <p>Sales</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link ">
+                <a href="{{url('admin/supplier')}}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Supplier</p>
                 </a>
@@ -86,13 +86,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <i class="far fa-th nav-icon"></i>
+                <a href="#" class="nav-link ">
+                  <i class="fas fa-th nav-icon"></i>
                   <p>Semua Stok</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url ('admin/gudang')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Gudang</p>
                 </a>
@@ -117,7 +117,13 @@
               </li>
             </ul>
           </li>
-          <x-Layout.sidebar.menu-item url="user" label="User" icon="fas fa-user" />
+          <li class="nav-item">
+                <a href="{{url ('admin/user')}}" class="nav-link">
+                  <i class="far fa-user "></i>
+                  <p>user</p>
+                </a>
+              </li>
+          <!-- <x-Layout.sidebar.menu-item url="admin/user" label="User" icon="fas fa-user" /> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

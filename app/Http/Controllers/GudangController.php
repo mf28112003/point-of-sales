@@ -29,7 +29,7 @@ class GudangController extends Controller
         // $gudang->foto = request('foto');
         $gudang->save();
 
-        return redirect('gudang');
+        return redirect('admin/gudang');
     }
 
     function show(gudang $gudang)
@@ -52,12 +52,12 @@ class GudangController extends Controller
         // $gudang->foto = request('foto');
         $gudang->save();
  
-        return redirect('gudang'); 
+        return redirect('admin/gudang'); 
     }
 
-    function delete(gudang $gudang)
+    function destroy(gudang $gudang)
     {
         $gudang->delete();
-        return redirect('gudang');
+        return redirect('admin/gudang');
     }
 }

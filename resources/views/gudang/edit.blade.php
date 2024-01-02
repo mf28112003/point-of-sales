@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="card-body">
-            <form method="post" action="{{url('gudang', $gudang->id)}}">
+            <form method="post" action="{{url('admin/gudang', $gudang->id)}}">
                 @csrf
                 @method('put')
                 <div class="row">

@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="card-body">
-            <form method="post" action="{{ url('user') }}">
+            <form method="post" action="{{ url('admin/user') }}">
                 @csrf
                 <div class="row">
                     <div class="col-md-12">
@@ -27,6 +27,16 @@
                         <div class="form-group">
                             <label for="" class="control-label">Email</label>
                             <input type="email" name="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="" class="control-label">jenis kelamin</label>
+                            <select name="jenis_kelamin" class="form-control">
+                                <option value=""></option>
+                                <option value="Laki laki">Laki laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-md-12">
